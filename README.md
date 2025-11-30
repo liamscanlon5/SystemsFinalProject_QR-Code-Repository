@@ -66,4 +66,5 @@ This diagram shows the flow of data: a user sends a request, it enters the secur
 **Public Cloud App:** (Optional)
 
 
-*Acknowledgments:* Development assisted by LLM prompting (Gemini) for boilerplate code generation and documentation formatting.
+## 8) Acknowledgements and Academic Integrity
+Development assisted by LLM prompting (Gemini) for boilerplate code generation and documentation formatting.
