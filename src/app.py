@@ -14,29 +14,27 @@ def home():
 
 @app.route('/health')
 def health():
-    # Required for Rubric "Functionality" & Ops
     return {"status": "healthy"}, 200
 
 @app.route('/generate', methods=['POST'])
 def generate_qr():
-    # 1. Get data from request
+    # Get data from request
     content = request.json.get('data')
     
+    # Validate input
     if not content:
         return {"error": "No 'data' field provided"}, 400
 
-    # 2. Generate QR Code using the library
-    # concept: Data Pipelines (Input -> Process -> Output)
+    # Generate QR Code
     img = qrcode.make(content)
     
-    # 3. Save to memory buffer (don't clutter file system)
+    # Save to memory buffer
     buf = io.BytesIO()
     img.save(buf)
     buf.seek(0)
 
-    # 4. Return image directly
+    # Return image
     return send_file(buf, mimetype='image/png')
 
 if __name__ == '__main__':
-    # Listens on 0.0.0.0 to be accessible inside Docker/Cloud
     app.run(host='0.0.0.0', port=5000)
