@@ -64,8 +64,7 @@ This diagram shows the flow of data: a user sends a request, it enters the secur
 ## 7) Links
 **GitHub Repo:** https://github.com/liamscanlon5/SystemsFinalProject_QR-Code-Repository.git
 
-**Public Cloud App:** https://systemsfinalproject-qr-code-repository.onrender.com/
-
+**Public Cloud App:** https://systemsfinalproject-qr-code-repository.onrender.com/health
 
 ## 8) Acknowledgements and Academic Integrity
 Development assisted by LLM prompting (Gemini) for boilerplate code generation and documentation formatting.
