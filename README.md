@@ -33,7 +33,7 @@ This diagram shows the flow of data: a user sends a request, it enters the secur
 ```
 
 ## 4) Design Decisions
-**Why this concept:** I chose a Flask API because it keeps the "heavy lifting" (making the image) separate from the user interface. This makes the system cleaner and easier to maintain. By using a container, I ensured this tool runs exactly the same on any computer—whether it's my laptop, a cloud server, or a field device—which aligns with the course's focus on building reliable systems.
+**Why this concept:** I chose a Flask API because it keeps the "heavy lifting" (making the image) separate from the user interface. This makes the system cleaner and easier to maintain. By using a container, I ensured this tool runs exactly the same on any computer—whether it's my laptop, a cloud server, or a field device.
     *Alternatives Considered:* I considered building a simple command-line (CLI) script instead of a web server. I didn't choose this option because while a CLI is     simpler, it can only be used by the person sitting at that specific computer. An API architecture was chosen because it allows the tool to be accessed remotely by mobile phones or other applications, which is much more useful in a real-world "Systems" context.
 
 **Tradeoffs:** *Memory vs Disk:* I chose to process images in-memory (io.BytesIO) to keep the container stateless and fast, rather than saving files to disk. 
